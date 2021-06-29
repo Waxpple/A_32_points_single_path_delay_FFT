@@ -1,0 +1,130 @@
+module Rom4(
+    input clk,
+    input rst_n,
+    input [5:0] address,
+    output reg [21:0] data_real_out,
+    output reg [21:0] data_imag_out
+);
+always@(*)begin
+    case (address)
+//8 
+    6'b001000:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//9 
+    6'b001001:begin
+//0.70312 
+        data_real_out=22'b0000000000000000101101;
+//-0.70312 
+        data_imag_out=22'b1111111111111111010011;
+    end
+//10 
+    6'b001010:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//11 
+    6'b001011:begin
+//-0.70312 
+        data_real_out=22'b1111111111111111010011;
+//-0.70312 
+        data_imag_out=22'b1111111111111111010011;
+    end
+//16 
+    6'b010000:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//17 
+    6'b010001:begin
+//0.70312 
+        data_real_out=22'b0000000000000000101101;
+//-0.70312 
+        data_imag_out=22'b1111111111111111010011;
+    end
+//18 
+    6'b010010:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//19 
+    6'b010011:begin
+//-0.70312 
+        data_real_out=22'b1111111111111111010011;
+//-0.70312 
+        data_imag_out=22'b1111111111111111010011;
+    end
+//24 
+    6'b011000:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//25 
+    6'b011001:begin
+//0.70312 
+        data_real_out=22'b0000000000000000101101;
+//-0.70312 
+        data_imag_out=22'b1111111111111111010011;
+    end
+//26 
+    6'b011010:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//27 
+    6'b011011:begin
+//-0.70312 
+        data_real_out=22'b1111111111111111010011;
+//-0.70312 
+        data_imag_out=22'b1111111111111111010011;
+    end
+//32 
+    6'b100000:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//33 
+    6'b100001:begin
+//0.70312 
+        data_real_out=22'b0000000000000000101101;
+//-0.70312 
+        data_imag_out=22'b1111111111111111010011;
+    end
+//34 
+    6'b100010:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//35 
+    6'b100011:begin
+//-0.70312 
+        data_real_out=22'b1111111111111111010011;
+//-0.70312 
+        data_imag_out=22'b1111111111111111010011;
+    end
+//1 
+    default:begin
+        data_real_out=23'b0000000000000001000000;
+//1 
+        data_imag_out=23'b0000000000000000000000;
+    end
+    endcase
+end
+endmodule

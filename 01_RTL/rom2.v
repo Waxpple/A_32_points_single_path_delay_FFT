@@ -1,0 +1,130 @@
+module Rom2(
+    input clk,
+    input rst_n,
+    input [5:0] address,
+    output reg [21:0] data_real_out,
+    output reg [21:0] data_imag_out
+);
+always@(*)begin
+    case (address)
+//4 
+    6'b000100:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//5 
+    6'b000101:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//8 
+    6'b001000:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//9 
+    6'b001001:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//12 
+    6'b001100:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//13 
+    6'b001101:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//16 
+    6'b010000:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//17 
+    6'b010001:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//20 
+    6'b010100:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//21 
+    6'b010101:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//24 
+    6'b011000:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//25 
+    6'b011001:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//28 
+    6'b011100:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//29 
+    6'b011101:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//32 
+    6'b100000:begin
+//1 
+        data_real_out=22'b0000000000000001000000;
+//0 
+        data_imag_out=22'b0000000000000000000000;
+    end
+//33 
+    6'b100001:begin
+//0 
+        data_real_out=22'b0000000000000000000000;
+//-1 
+        data_imag_out=22'b1111111111111111000000;
+    end
+//1 
+    default:begin
+        data_real_out=23'b0000000000000001000000;
+//1 
+        data_imag_out=23'b0000000000000000000000;
+    end
+    endcase
+end
+endmodule

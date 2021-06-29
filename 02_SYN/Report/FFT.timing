@@ -1,0 +1,78 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FFT
+Version: N-2017.09-SP2
+Date   : Tue Apr  6 15:04:43 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: top
+
+  Startpoint: butter8/reg_counter_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: reg_stage4_data_real_out_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  butter8/reg_counter_reg[4]/CK (QDFFRBS)                 0.00 #     0.00 r
+  butter8/reg_counter_reg[4]/Q (QDFFRBS)                  0.71       0.71 r
+  U4499/O (XNR2HS)                                        0.29       1.00 r
+  U5761/O (NR2P)                                          0.14       1.14 f
+  U5763/O (ND2)                                           0.26       1.40 r
+  U3863/O (NR2)                                           0.20       1.60 f
+  U5824/O (INV1S)                                         0.19       1.80 r
+  U5826/O (OAI112HS)                                      0.18       1.98 f
+  U3852/O (BUF2CK)                                        0.84       2.81 f
+  U5899/O (AN2B1S)                                        0.49       3.31 f
+  U3299/C (HA1S)                                          0.34       3.64 f
+  U6036/CO (FA1S)                                         0.51       4.15 f
+  U6002/S (FA1S)                                          0.67       4.82 r
+  U6030/S (FA1S)                                          0.55       5.37 f
+  U6065/CO (FA1S)                                         0.57       5.93 f
+  U6095/S (FA1S)                                          0.73       6.67 r
+  U6066/O (NR2)                                           0.18       6.85 f
+  U6306/O (OAI12HS)                                       0.28       7.13 r
+  U6308/O (AOI12HS)                                       0.17       7.30 f
+  U6313/O (OAI12HS)                                       0.22       7.53 r
+  U6314/O (AOI12HS)                                       0.14       7.67 f
+  U6337/O (OAI12H)                                        0.23       7.90 r
+  U6364/O (AOI12HS)                                       0.20       8.10 f
+  U6385/O (OAI12H)                                        0.23       8.34 r
+  U6399/O (AOI12HS)                                       0.20       8.54 f
+  U6408/O (OAI12H)                                        0.23       8.77 r
+  U6414/O (AOI12HS)                                       0.18       8.95 f
+  U6418/O (OAI12HS)                                       0.25       9.20 r
+  U6419/O (XNR2HS)                                        0.18       9.38 r
+  U6420/O (AO222)                                         0.36       9.73 r
+  reg_stage4_data_real_out_reg[21]/D (QDFFRBS)            0.00       9.73 r
+  data arrival time                                                  9.73
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.10       9.90
+  reg_stage4_data_real_out_reg[21]/CK (QDFFRBS)           0.00       9.90 r
+  library setup time                                     -0.17       9.73
+  data required time                                                 9.73
+  --------------------------------------------------------------------------
+  data required time                                                 9.73
+  data arrival time                                                 -9.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
